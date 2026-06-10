@@ -1,93 +1,67 @@
-CREATE DATABASE celebal_week2;
-USE celebal_week2;
--- Explore Table
-SELECT * FROM superstore LIMIT 10;
-DESCRIBE superstore;
+create database celebal_week2;
+use celebal_week2;
 
--- Filter data by Region
-SELECT *
-FROM superstore
-WHERE Region = 'West';
+-- check data & structure
+select * from superstore limit 10;
+describe superstore;
 
--- Filter data by Category
-SELECT *
-FROM superstore
-WHERE Category = 'Technology';
+-- filtering data by region, category, sales
+select * from superstore where Region = 'West';
 
--- Filter data by Sales value
-SELECT *
-FROM superstore
-WHERE Sales > 1000;
+select * from superstore where Category = 'Technology';
 
--- Filter data by Date
-SELECT *
-FROM superstore
-WHERE STR_TO_DATE(`Order Date`, '%m/%d/%Y')>= '2017-01-01';
+select * from superstore where Sales > 1000;
 
--- Total Sales by Category
-SELECT Category,
-       SUM(Sales) AS total_sales
-FROM superstore
-GROUP BY Category;
+-- Filter by order date
+select * from superstore
+where STR_TO_DATE(`Order Date`, '%m/%d/%Y') >= '2017-01-01';
 
--- Total Quantity by Category
-SELECT Category,
-       SUM(Quantity) AS total_quantity
-FROM superstore
-GROUP BY Category;
+-- Aggregations by Category (Sales, Qty, Avg)
+select Category, sum(Sales) as total_sales
+from superstore group by Category;
 
--- Average Sales by Category
-SELECT Category,
-       AVG(Sales) AS average_sales
-FROM superstore
-GROUP BY Category;
+select Category, sum(Quantity) as total_qty
+from superstore group by Category;
 
--- Top 10 Products by Sales
-SELECT `Product Name`,
-       SUM(Sales) AS total_sales
-FROM superstore
-GROUP BY `Product Name`
-ORDER BY total_sales DESC
-LIMIT 10;
+select Category, avg(Sales) as avg_sales
+from superstore group by Category;
 
--- Top Categories by Sales
-SELECT Category,
-       SUM(Sales) AS total_sales
-FROM superstore
-GROUP BY Category
-ORDER BY total_sales DESC;
+-- Top 10 selling products
+select `Product Name`, sum(Sales) as total_sales
+from superstore group by `Product Name`
+order by total_sales desc limit 10;
 
--- Monthly Sales Trend Analysis
-SELECT
-    YEAR(STR_TO_DATE(`Order Date`, '%m/%d/%Y')) AS year,
-    MONTH(STR_TO_DATE(`Order Date`, '%m/%d/%Y')) AS month,
-    SUM(Sales) AS total_sales
-FROM superstore
-GROUP BY year, month
-ORDER BY year, month;
+-- Categories ranked by sales
+select Category, sum(Sales) as total_sales
+from superstore group by Category
+order by total_sales desc;
 
--- Top 10 Customers by Sales
-SELECT `Customer Name`,
-       SUM(Sales) AS total_sales
-FROM superstore
-GROUP BY `Customer Name`
-ORDER BY total_sales DESC
-LIMIT 10;
+-- Monthly trends
+select
+    year(STR_TO_DATE(`Order Date`, '%m/%d/%Y')) as order_year,
+    month(STR_TO_DATE(`Order Date`, '%m/%d/%Y')) as order_month,
+    sum(Sales) as total_sales
+from superstore
+group by order_year, order_month
+order by order_year, order_month;
 
--- Check Duplicate Order IDs
-SELECT `Order ID`,
-       COUNT(*) AS duplicate_count
-FROM superstore
-GROUP BY `Order ID`
-HAVING COUNT(*) > 1;
+-- Top 10 customers
+select `Customer Name`, sum(Sales) as total_sales
+from superstore group by `Customer Name`
+order by total_sales desc limit 10;
 
--- Total Row Count
-SELECT COUNT(*) AS total_rows
-FROM superstore;
+-- Finding duplicate orders
+select `Order ID`, count(*) as cnt
+from superstore
+group by `Order ID`
+having count(*) > 1;
 
--- Check for NULL values in important columns
-SELECT
-    SUM(CASE WHEN Sales IS NULL THEN 1 ELSE 0 END) AS null_sales,
-    SUM(CASE WHEN Quantity IS NULL THEN 1 ELSE 0 END) AS null_quantity,
-    SUM(CASE WHEN Category IS NULL THEN 1 ELSE 0 END) AS null_category
-FROM superstore;
+-- total row count
+select count(*) as total_records from superstore;
+
+-- Data Quality: checking for nulls
+select
+    sum(case when Sales is null then 1 else 0 end) as null_sales,
+    sum(case when Quantity is null then 1 else 0 end) as null_qty,
+    sum(case when Category is null then 1 else 0 end) as null_cat
+from superstore;
