@@ -1,40 +1,35 @@
 -- SECTION A
 
-USE celebal_week2_task2;
+use celebal_week2_task2;
 
 -- Q1. Display all columns and rows from customers table
-SELECT * FROM customers;
+select * from customers;
 
 -- Q2. Display first_name, last_name and city of all customers
-SELECT first_name, last_name, city
-FROM customers;
+select first_name, last_name, city from customers;
 
 -- Q3. List all unique product categories
-SELECT DISTINCT category
-FROM products;
+select distinct category from products;
 
 /*
 Q4. Primary Keys in the database
 
-customers    -> customer_id
-products     -> product_id
-orders       -> order_id
-order_items  -> item_id
+- customers table: customer_id
+- products table: product_id
+- orders table: order_id
+- order_items table: item_id
 
-Explanation:
-A Primary Key uniquely identifies each record in a table.
+Quick Explanation:
+A PK uniquely identifies a specific row in a table so there's no confusion.
 
-Why must it be UNIQUE?
-- So that every row can be identified separately.
-- Duplicate primary key values would create ambiguity.
+Why Unique?
+To make sure every single row can be pulled up separately. If IDs could repeat, we wouldn't know which record is which.
 
-Why must it be NOT NULL?
-- Every record must have an identifier.
-- NULL means "unknown value", which cannot uniquely identify a row.
+Why Not Null?
+Every single record needs to have a valid ID. An empty or unknown value (NULL) can't act as a proper identifier.
 
 Example:
-Two customers cannot have the same customer_id.
-Also, customer_id cannot be left empty (NULL).
+Two different customers can't share the same customer_id, and you can't leave the ID field blank when creating a new customer.
 */
 
 /*
@@ -45,60 +40,30 @@ email VARCHAR(100) UNIQUE NOT NULL
 Explanation:
 
 1. NOT NULL
-   - Email cannot be left empty.
-   - Every customer record must contain an email address.
+   - Means the email field can't be left blank. Every customer profile requires an email address.
 
 2. UNIQUE
-   - Duplicate email addresses are not allowed.
-   - Each customer must have a different email.
+   - Prevents two customers from signing up with the exact same email address.
 
 Example:
+If I try to run this query when 'aarav.s@email.com' is already taken:
 
-This will fail because email already exists:
+insert into customers values (999, 'Test', 'User', 'aarav.s@email.com', 'Delhi', 'Delhi', '2024-01-01', false);
 
-INSERT INTO customers
-VALUES (
-999,
-'Test',
-'User',
-'aarav.s@email.com',
-'Delhi',
-'Delhi',
-'2024-01-01',
-FALSE
-);
-
-Reason:
-The email 'aarav.s@email.com' already belongs to another customer.
-MySQL will throw a UNIQUE constraint violation error.
+It will fail. MySQL will throw an error saying the UNIQUE constraint was violated because that email already exists in the database.
 */
 
+-- Q6. Insert a product with negative price
+
+insert into products values (999, 'Test Product', 'Electronics', 'TestBrand', -50, 10);
+
 /*
-Q6. Insert a product with negative price
-
-INSERT INTO products
-VALUES (
-999,
-'Test Product',
-'Electronics',
-'TestBrand',
--50,
-10
-);
-
 Result:
-The insertion will fail.
+The query will fail and reject the insertion.
 
 Reason:
-The products table contains:
-
+The products table has a validation rule set up:
 CHECK (unit_price > 0)
 
-This constraint ensures that product prices
-must always be greater than zero.
-
-Since -50 is a negative value,
-it violates the CHECK constraint.
-
-MySQL will reject the record.
+This rule forces all product prices to be positive numbers. Because -50 is less than zero, it triggers a CHECK constraint violation error.
 */

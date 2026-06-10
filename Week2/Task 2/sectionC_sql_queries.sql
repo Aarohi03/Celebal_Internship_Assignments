@@ -1,34 +1,31 @@
 -- Q13. Total number of orders
-SELECT COUNT(*) AS total_orders
-FROM orders;
+select count(*) as total_orders from orders;
 
 -- Q14. Total revenue from Delivered orders
-SELECT SUM(total_amount) AS total_revenue
-FROM orders
-WHERE status='Delivered';
+select sum(total_amount) as net_revenue
+from orders
+where status = 'Delivered';
 
 -- Q15. Average product price by category
-SELECT category,
-       AVG(unit_price) AS average_price
-FROM products
-GROUP BY category;
+select category, avg(unit_price) as avg_price
+from products
+group by category;
 
 -- Q16. Count of orders and total revenue by status
-SELECT status,
-       COUNT(*) AS order_count,
-       SUM(total_amount) AS total_revenue
-FROM orders
-GROUP BY status
-ORDER BY total_revenue DESC;
+select status,
+       count(*) as order_cnt,
+       sum(total_amount) as total_rev
+from orders
+group by status
+order by total_rev desc;
 
 -- Q17. Most expensive and cheapest product
-SELECT MAX(unit_price) AS highest_price,
-       MIN(unit_price) AS lowest_price
-FROM products;
+select max(unit_price) as max_price,
+       min(unit_price) as min_price
+from products;
 
 -- Q18. Categories with average price greater than 2000
-SELECT category,
-       AVG(unit_price) AS avg_price
-FROM products
-GROUP BY category
-HAVING AVG(unit_price) > 2000;
+select category, avg(unit_price) as avg_price
+from products
+group by category
+having avg(unit_price) > 2000;

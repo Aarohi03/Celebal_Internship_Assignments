@@ -1,64 +1,40 @@
--- Q7. Orders with status Delivered
-SELECT *
-FROM orders
-WHERE status='Delivered';
+--- Q7. Orders with status Delivered
+select * from orders where status = 'Delivered';
 
 -- Q8. Electronics products with price greater than 2000
-SELECT *
-FROM products
-WHERE category='Electronics'
-AND unit_price > 2000;
+select * from products
+where category = 'Electronics' and unit_price > 2000;
 
 -- Q9. Customers who joined in 2024 and belong to Maharashtra
-SELECT *
-FROM customers
-WHERE YEAR(join_date)=2024
-AND state='Maharashtra';
+select * from customers
+where year(join_date) = 2024 and state = 'Maharashtra';
 
--- Q10. Orders between 2024-08-10 and 2024-08-25
--- excluding cancelled orders
-
-SELECT *
-FROM orders
-WHERE order_date BETWEEN '2024-08-10' AND '2024-08-25'
-AND status <> 'Cancelled';
+-- Q10. Orders between 2024-08-10 and 2024-08-25 excluding cancelled orders
+select * from orders
+where order_date between '2024-08-10' and '2024-08-25'
+and status <> 'Cancelled';
 
 /*
 Q11. How does the index on order_date help?
 
-An index works like the index of a book.
+Think of an index like a textbook's index at the back.
 
-Without Index:
-- MySQL checks every row in the table.
-- This is called a Full Table Scan.
-- It becomes slow when the table contains many records.
+Without an Index:
+MySQL has to look through every single row from top to bottom just to find a few matching records. This is a Full Table Scan and it gets incredibly slow once the table grows huge.
 
-With Index:
-- MySQL directly jumps to the required date range.
-- Fewer rows are scanned.
-- Query execution becomes faster.
+With an Index:
+MySQL builds a quick lookup path. It can skip the noise and jump straight to the exact date range it needs. Fewer rows get scanned, making the query way faster.
 
 Example:
+select * from orders where order_date between '2024-08-10' and '2024-08-25';
 
-SELECT *
-FROM orders
-WHERE order_date BETWEEN '2024-08-10'
-AND '2024-08-25';
-
-This query can use the index on order_date
-to locate matching records quickly.
-
-Therefore, indexes improve search and filtering performance.
+Instead of scanning millions of records, this query uses the index to pinpoint the exact block of data for August 2024 instantly. So, indexes basically save a ton of search time.
 */
 
 -- Q12.
 -- Original query:
-SELECT *
-FROM customers
-WHERE YEAR(join_date)=2024;
+select * from customers where year(join_date) = 2024;
 
--- Index-friendly version
-SELECT *
-FROM customers
-WHERE join_date >= '2024-01-01'
-AND join_date < '2025-01-01';
+-- Index-friendly version (avoiding functions on indexed columns)
+select * from customers
+where join_date >= '2024-01-01' and join_date < '2025-01-01';
