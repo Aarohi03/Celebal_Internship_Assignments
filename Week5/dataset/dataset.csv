@@ -1,0 +1,10 @@
+id,name,age,category,salary,region
+1,Alex,23,Tech,50000,North
+2,Ben,34,HR,45000,East
+3,Chris,,Marketing,38000,West
+4,Diana,42,Tech,70000,North
+5,Evan,29,HR,42000,South
+2,Ben,34,HR,45000,East
+6,Fiona,31,Tech,,West
+7,George,-5,Finance,60000,East
+8,Hannah,45,Marketing,52000,North
