@@ -1,0 +1,153 @@
+order_id,customer_id,product_name,category,quantity,unit_price,discount,region,order_status,order_date,payment_mode,sales_person
+1,CUST1001,Mouse,Electronics,1,1000,5,South,Completed,31-05-2024,Cash,Riya
+2,CUST1002,Pen,Stationery,1,150,0,South,Completed,15-06-2024,Cash,Neha
+3,CUST1003,Keyboard,Electronics,7,750,15,East,Completed,28-03-2024,Card,Rahul
+4,CUST1004,Notebook,Stationery,3,750,10,North,Completed,01-04-2024,Net Banking,Riya
+5,CUST1005,Printer,Electronics,10,1000,0,West,Cancelled,21-01-2024,Cash,Rahul
+6,CUST1006,Keyboard,Electronics,5,12000,10,South,Cancelled,18-06-2024,Cash,Aman
+7,CUST1007,Desk,Furniture,5,250,5,North,Pending,11-06-2024,UPI,Priya
+8,CUST1008,Printer,Electronics,3,1500,10,South,Cancelled,04-06-2024,UPI,Riya
+9,CUST1009,Chair,Furniture,9,750,5,West,Pending,24-06-2024,UPI,Neha
+10,CUST1010,Printer,Electronics,1,750,,East,Pending,24-02-2024,UPI,Riya
+11,CUST1011,Cabinet,Furniture,6,750,15,West,Cancelled,08-03-2024,Net Banking,Karan
+12,CUST1012,Chair,Furniture,4,7500,20,East,Cancelled,02-04-2024,Net Banking,Rahul
+13,CUST1013,Desk,Furniture,3,7500,15,North,Completed,09-06-2024,Cash,Karan
+14,CUST1014,Chair,Furniture,7,12000,0,West,Pending,21-05-2024,Net Banking,Vikas
+15,CUST1015,Laptop,Electronics,2,7500,10,East,Completed,10-02-2024,UPI,Rahul
+16,CUST1016,Monitor,Electronics,1,1000,20,South,Cancelled,12-06-2024,Cash,Vikas
+17,CUST1017,Keyboard,Electronics,10,750,5,East,Completed,05-05-2024,Cash,Sneha
+18,CUST1018,Laptop,Electronics,2,1500,10,South,Completed,22-01-2024,Card,Riya
+19,CUST1019,Monitor,Electronics,2,7500,5,South,Cancelled,08-03-2024,Net Banking,Karan
+20,CUST1020,Keyboard,Electronics,10,2500,5,South,Cancelled,20-06-2024,UPI,Rahul
+21,CUST1021,Printer,Electronics,8,7500,15,North,Completed,27-03-2024,Card,
+22,CUST1022,Laptop,Electronics,10,7500,5,South,Completed,28-02-2024,Cash,Aman
+23,CUST1023,Mouse,Electronics,1,1500,0,South,Pending,18-05-2024,Net Banking,Neha
+24,CUST1024,Chair,Furniture,10,12000,15,South,Pending,25-01-2024,Net Banking,Neha
+25,CUST1025,Mouse,Electronics,7,1500,15,West,Pending,16-01-2024,Cash,Riya
+26,CUST1026,Pen,Stationery,6,250,5,South,Completed,18-04-2024,Net Banking,Karan
+27,CUST1027,Chair,Furniture,5,5000,5,North,Pending,15-06-2024,Cash,Aman
+28,CUST1028,Keyboard,Electronics,1,250,5,South,Pending,24-02-2024,Net Banking,Priya
+29,CUST1029,Pen,Stationery,1,500,15,North,Pending,14-03-2024,UPI,Priya
+30,CUST1030,Pen,Stationery,9,5000,5,South,Pending,28-05-2024,Card,Aman
+31,CUST1031,Keyboard,Electronics,1,1500,0,North,Cancelled,15-01-2024,Net Banking,Karan
+32,CUST1032,Keyboard,Electronics,2,500,0,North,Cancelled,31-01-2024,Card,Rahul
+33,CUST1033,Cabinet,Furniture,4,12000,20,North,Cancelled,17-06-2024,Cash,Rahul
+34,CUST1034,Cabinet,Furniture,10,7500,10,East,Completed,08-03-2024,UPI,Neha
+35,CUST1035,Pen,Stationery,3,1000,,East,Completed,08-06-2024,Cash,Priya
+36,CUST1036,Cabinet,Furniture,2,250,20,South,Cancelled,30-03-2024,UPI,Karan
+37,CUST1037,Mouse,Electronics,4,1500,10,South,Pending,19-06-2024,UPI,Aman
+38,CUST1038,Keyboard,Electronics,5,250,5,East,Completed,10-03-2024,Cash,Karan
+39,CUST1039,Notebook,Stationery,10,750,10,South,Cancelled,05-03-2024,UPI,Priya
+40,CUST1040,Laptop,Electronics,2,2500,10,North,Completed,12-06-2024,UPI,Karan
+41,CUST1041,Notebook,Stationery,3,5000,20,West,Cancelled,20-01-2024,Cash,Riya
+42,CUST1042,Chair,Furniture,9,150,10,South,Pending,19-03-2024,Card,Aman
+43,CUST1043,Printer,Electronics,1,1500,5,South,Cancelled,23-05-2024,Cash,Sneha
+44,CUST1044,Pen,Stationery,10,500,5,South,Completed,15-02-2024,Net Banking,Aman
+45,CUST1045,Printer,Electronics,7,750,10,South,Cancelled,10-01-2024,Cash,Rahul
+46,CUST1046,Monitor,Electronics,4,750,15,,Pending,07-01-2024,Card,Neha
+47,CUST1047,Desk,Furniture,7,1500,10,North,Pending,22-06-2024,UPI,Rahul
+48,CUST1048,Keyboard,Electronics,6,150,0,East,Completed,28-01-2024,UPI,Aman
+49,CUST1049,Cabinet,Furniture,7,1500,10,West,Cancelled,27-05-2024,Cash,Rahul
+50,CUST1050,Desk,Furniture,5,150,15,North,Cancelled,20-04-2024,Card,Sneha
+51,CUST1051,Mouse,Electronics,6,12000,10,North,Cancelled,19-06-2024,UPI,Vikas
+52,CUST1052,Pen,Stationery,6,2500,10,South,Completed,22-06-2024,Net Banking,Rahul
+53,CUST1053,Chair,Furniture,10,12000,10,West,Cancelled,14-03-2024,Cash,Vikas
+54,CUST1054,Desk,Furniture,7,12000,20,East,Pending,21-06-2024,Net Banking,Priya
+55,CUST1055,Desk,Furniture,9,5000,5,North,Pending,01-03-2024,UPI,Riya
+56,CUST1056,Notebook,Stationery,4,750,5,North,Completed,05-06-2024,Card,Priya
+57,CUST1057,Mouse,Electronics,8,2500,20,South,Cancelled,12-04-2024,Net Banking,Priya
+58,CUST1058,Desk,Furniture,3,150,0,West,Completed,13-01-2024,Card,Priya
+59,CUST1059,Keyboard,Electronics,4,250,15,South,Pending,05-06-2024,UPI,Priya
+60,CUST1060,Keyboard,Electronics,7,7500,15,South,Cancelled,07-03-2024,Net Banking,Priya
+61,CUST1061,Desk,Furniture,5,7500,15,South,Pending,14-03-2024,Net Banking,Riya
+62,CUST1062,Desk,Furniture,5,1500,10,North,Completed,08-04-2024,Card,Neha
+63,CUST1063,Chair,Furniture,4,250,15,West,Pending,16-01-2024,Net Banking,Rahul
+64,CUST1064,Desk,Furniture,7,2500,20,North,Cancelled,02-01-2024,Net Banking,Priya
+65,CUST1065,Printer,Electronics,5,2500,15,South,Pending,21-04-2024,Card,Vikas
+66,CUST1066,Monitor,Electronics,1,2500,10,West,Cancelled,02-02-2024,Card,Priya
+67,CUST1067,Cabinet,Furniture,9,150,15,North,Completed,28-04-2024,Net Banking,Karan
+68,CUST1068,Chair,Furniture,1,1000,,East,Completed,27-03-2024,Net Banking,Sneha
+69,CUST1069,Pen,Stationery,5,2500,10,North,Pending,30-03-2024,Cash,Aman
+70,CUST1070,Desk,Furniture,2,150,0,South,Completed,02-03-2024,Cash,Karan
+71,CUST1071,Chair,Furniture,8,250,20,South,Pending,12-02-2024,UPI,Sneha
+72,CUST1072,Cabinet,Furniture,10,250,5,East,Completed,27-05-2024,Cash,Vikas
+73,CUST1073,Pen,Stationery,7,750,0,South,Completed,24-05-2024,UPI,Riya
+74,CUST1074,Laptop,Electronics,6,7500,15,East,Completed,17-04-2024,UPI,Aman
+75,CUST1075,Monitor,Electronics,2,2500,10,West,Cancelled,15-02-2024,Card,Rahul
+76,CUST1076,Keyboard,Electronics,5,12000,20,West,Pending,23-03-2024,Net Banking,Vikas
+77,CUST1077,Desk,Furniture,2,1000,15,South,Pending,08-01-2024,Net Banking,Sneha
+78,CUST1078,Monitor,Electronics,6,500,15,South,Pending,12-03-2024,UPI,Sneha
+79,CUST1079,Cabinet,Furniture,5,7500,0,South,Completed,05-05-2024,Card,Rahul
+80,CUST1080,Keyboard,Electronics,4,5000,15,West,Completed,26-02-2024,Cash,Vikas
+81,CUST1081,Pen,Stationery,4,1000,20,East,Pending,20-05-2024,UPI,Rahul
+82,CUST1082,Printer,Electronics,6,5000,10,East,Pending,19-02-2024,Card,Riya
+83,CUST1083,Printer,Electronics,2,7500,5,South,Completed,30-05-2024,Net Banking,Vikas
+84,CUST1084,Keyboard,Electronics,10,1000,0,South,Pending,15-02-2024,Card,Sneha
+85,CUST1085,Notebook,Stationery,1,7500,5,East,Completed,27-06-2024,Cash,Vikas
+86,CUST1086,Chair,Furniture,8,250,0,East,Pending,28-03-2024,Net Banking,Priya
+87,CUST1087,Chair,Furniture,1,1000,15,North,Completed,19-01-2024,Net Banking,Priya
+88,CUST1088,Cabinet,Furniture,1,500,5,East,Completed,22-05-2024,Card,Riya
+89,CUST1089,Pen,Stationery,10,12000,20,South,Cancelled,23-04-2024,Net Banking,
+90,CUST1090,Notebook,Stationery,10,2500,10,North,Cancelled,09-06-2024,Cash,Neha
+91,CUST1091,Desk,Furniture,5,250,5,South,Completed,01-01-2024,Cash,Karan
+92,CUST1092,Pen,Stationery,8,12000,15,East,Completed,29-06-2024,Card,Vikas
+93,CUST1093,Notebook,Stationery,8,250,5,East,Cancelled,30-01-2024,Card,Rahul
+94,CUST1094,Keyboard,Electronics,4,500,10,South,Completed,19-03-2024,Cash,Karan
+95,CUST1095,Cabinet,Furniture,10,1000,15,North,Pending,10-03-2024,UPI,Rahul
+96,CUST1096,Keyboard,Electronics,9,5000,15,North,Cancelled,23-03-2024,Cash,Rahul
+97,CUST1097,Cabinet,Furniture,5,150,0,South,Cancelled,27-05-2024,Cash,Vikas
+98,CUST1098,Laptop,Electronics,3,5000,20,West,Pending,11-06-2024,Card,Rahul
+99,CUST1099,Monitor,Electronics,2,5000,10,West,Pending,11-02-2024,UPI,Riya
+100,CUST1100,Printer,Electronics,7,5000,10,West,Cancelled,23-01-2024,Cash,Priya
+101,CUST1101,Printer,Electronics,5,1500,0,West,Cancelled,15-04-2024,Cash,Priya
+102,CUST1102,Laptop,Electronics,4,7500,10,West,Cancelled,22-02-2024,Net Banking,Aman
+103,CUST1103,Notebook,Stationery,9,500,10,West,Cancelled,08-01-2024,Net Banking,Riya
+104,CUST1104,Cabinet,Furniture,4,500,10,North,Cancelled,27-02-2024,Net Banking,Riya
+105,CUST1105,Mouse,Electronics,8,250,5,West,Cancelled,16-04-2024,UPI,Vikas
+106,CUST1106,Monitor,Electronics,8,750,15,South,Pending,18-01-2024,Card,Karan
+107,CUST1107,Notebook,Stationery,7,1500,20,East,Completed,30-05-2024,UPI,Vikas
+108,CUST1108,Cabinet,Furniture,8,500,15,West,Pending,26-04-2024,UPI,Rahul
+109,CUST1109,Printer,Electronics,4,750,20,West,Completed,22-03-2024,Net Banking,Aman
+110,CUST1110,Monitor,Electronics,7,2500,5,West,Completed,26-01-2024,Card,Sneha
+111,CUST1111,Monitor,Electronics,2,7500,15,North,Cancelled,16-06-2024,Card,Rahul
+112,CUST1112,Chair,Furniture,2,5000,10,East,Cancelled,25-03-2024,Net Banking,Riya
+113,CUST1113,Keyboard,Electronics,7,1500,15,North,Cancelled,10-06-2024,Cash,Neha
+114,CUST1114,Notebook,Stationery,4,250,15,North,Cancelled,12-02-2024,Cash,Priya
+115,CUST1115,Notebook,Stationery,1,150,10,North,Pending,20-04-2024,UPI,Sneha
+116,CUST1116,Chair,Furniture,4,7500,15,South,Completed,05-06-2024,Card,Riya
+117,CUST1117,Pen,Stationery,10,750,15,South,Completed,27-04-2024,Net Banking,Vikas
+118,CUST1118,Notebook,Stationery,1,5000,10,South,Completed,30-05-2024,Net Banking,Sneha
+119,CUST1119,Notebook,Stationery,7,1000,15,East,Completed,28-01-2024,Net Banking,Priya
+120,CUST1120,Desk,Furniture,7,12000,10,,Cancelled,17-06-2024,UPI,Aman
+121,CUST1121,Pen,Stationery,5,150,20,North,Cancelled,28-02-2024,Net Banking,Vikas
+122,CUST1122,Cabinet,Furniture,6,750,5,East,Cancelled,09-06-2024,Card,Riya
+123,CUST1123,Laptop,Electronics,5,5000,0,East,Cancelled,16-03-2024,Card,Riya
+124,CUST1124,Printer,Electronics,7,500,5,South,Cancelled,12-02-2024,UPI,Vikas
+125,CUST1125,Notebook,Stationery,8,1000,10,North,Pending,27-02-2024,Cash,Karan
+126,CUST1126,Pen,Stationery,9,1500,0,West,Completed,26-04-2024,UPI,Riya
+127,CUST1127,Printer,Electronics,5,12000,15,East,Completed,07-01-2024,Card,Priya
+128,CUST1128,Cabinet,Furniture,9,1500,20,South,Cancelled,28-06-2024,Cash,Priya
+129,CUST1129,Notebook,Stationery,7,250,5,North,Completed,30-01-2024,UPI,Priya
+130,CUST1130,Mouse,Electronics,4,7500,5,West,Pending,30-05-2024,UPI,Rahul
+131,CUST1131,Chair,Furniture,7,250,15,West,Pending,25-02-2024,Cash,Sneha
+132,CUST1132,Monitor,Electronics,8,750,10,North,Cancelled,16-01-2024,UPI,Sneha
+133,CUST1133,Pen,Stationery,5,750,0,West,Completed,13-01-2024,Card,Aman
+134,CUST1134,Printer,Electronics,4,500,20,South,Completed,29-02-2024,Card,Neha
+135,CUST1135,Printer,Electronics,3,12000,0,East,Completed,14-02-2024,Card,Vikas
+136,CUST1136,Mouse,Electronics,1,500,0,East,Completed,14-02-2024,UPI,Aman
+137,CUST1137,Notebook,Stationery,1,500,15,North,Cancelled,24-04-2024,Cash,Priya
+138,CUST1138,Printer,Electronics,9,12000,0,West,Cancelled,17-06-2024,Card,Aman
+139,CUST1139,Keyboard,Electronics,5,5000,0,North,Pending,24-06-2024,Net Banking,Rahul
+140,CUST1140,Mouse,Electronics,8,5000,0,North,Pending,02-02-2024,Card,Riya
+141,CUST1141,Notebook,Stationery,10,12000,20,East,Pending,09-05-2024,UPI,Priya
+142,CUST1142,Cabinet,Furniture,7,250,0,South,Pending,15-04-2024,Net Banking,Neha
+143,CUST1143,Printer,Electronics,8,2500,15,North,Pending,19-06-2024,Net Banking,Sneha
+144,CUST1144,Notebook,Stationery,6,500,15,North,Completed,20-04-2024,Cash,Riya
+145,CUST1145,Mouse,Electronics,6,500,20,North,Cancelled,15-04-2024,UPI,Riya
+146,CUST1146,Printer,Electronics,7,150,10,East,Pending,09-02-2024,Cash,Neha
+147,CUST1147,Monitor,Electronics,4,250,10,East,Completed,19-04-2024,UPI,Neha
+148,CUST1148,Keyboard,Electronics,10,12000,20,North,Cancelled,16-02-2024,UPI,Aman
+149,CUST1149,Notebook,Stationery,5,1500,10,North,Completed,18-01-2024,Card,Rahul
+150,CUST1150,Chair,Furniture,1,250,20,South,Pending,28-03-2024,Net Banking,Priya
+11,CUST1011,Cabinet,Furniture,6,750,15,West,Cancelled,08-03-2024,Net Banking,Karan
+51,CUST1051,Mouse,Electronics,6,12000,10,North,Cancelled,19-06-2024,UPI,Vikas

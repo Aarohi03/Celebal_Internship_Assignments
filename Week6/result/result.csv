@@ -1,0 +1,17 @@
+order_id,product_name,category,quantity,price,region,total_amount
+47,Desk,Furniture,7,1500.0,North,10500.0
+21,Printer,Electronics,8,7500.0,North,60000.0
+55,Desk,Furniture,9,5000.0,North,45000.0
+62,Desk,Furniture,5,1500.0,North,7500.0
+69,Pen,Stationery,5,2500.0,North,12500.0
+90,Notebook,Stationery,10,2500.0,North,25000.0
+96,Keyboard,Electronics,9,5000.0,North,45000.0
+27,Chair,Furniture,5,5000.0,North,25000.0
+140,Mouse,Electronics,8,5000.0,North,40000.0
+139,Keyboard,Electronics,5,5000.0,North,25000.0
+64,Desk,Furniture,7,2500.0,North,17500.0
+113,Keyboard,Electronics,7,1500.0,North,10500.0
+143,Printer,Electronics,8,2500.0,North,20000.0
+149,Notebook,Stationery,5,1500.0,North,7500.0
+51,Mouse,Electronics,6,12000.0,North,72000.0
+148,Keyboard,Electronics,10,12000.0,North,120000.0
